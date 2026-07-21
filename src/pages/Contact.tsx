@@ -1,0 +1,7 @@
+import { ArrowUpRight, BriefcaseBusiness, GitFork, Mail } from 'lucide-react'
+const contacts = [
+  {label:'LinkedIn', value:'Connect professionally', href:'https://www.linkedin.com/', icon:BriefcaseBusiness},
+  {label:'GitHub', value:'Explore the code', href:'https://github.com/', icon:GitFork},
+  {label:'Email', value:'Start a conversation', href:'mailto:hello@example.com', icon:Mail},
+]
+export function Contact() { return <div className="container-page pt-20 sm:pt-28"><header className="max-w-2xl"><p className="eyebrow">Get in touch</p><h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Let’s build something useful.</h1><p className="mt-5 text-lg leading-8 text-zinc-400">Interested in a product, AI system or engineering collaboration? Reach out through any of the channels below.</p></header><div className="mt-14 grid gap-4 md:grid-cols-3">{contacts.map(({label,value,href,icon:Icon})=><a key={label} href={href} target={href.startsWith('http')?'_blank':undefined} rel="noreferrer" className="surface group rounded-xl p-6 transition hover:border-white/[0.16] hover:bg-white/[0.04]"><div className="flex items-start justify-between"><div className="grid size-10 place-items-center rounded-lg border border-white/10 bg-white/[0.04]"><Icon size={18}/></div><ArrowUpRight size={17} className="text-zinc-600 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"/></div><h2 className="mt-8 font-semibold">{label}</h2><p className="mt-1 text-sm text-zinc-500">{value}</p></a>)}</div></div> }

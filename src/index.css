@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: dark; }
+  html { scroll-behavior: smooth; }
+  body { @apply m-0 bg-ink font-sans text-zinc-100 antialiased; }
+  ::selection { @apply bg-violet-500/30 text-white; }
+  :focus-visible { @apply outline-none ring-2 ring-violet-400 ring-offset-2 ring-offset-ink; }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-violet-400; }
+  .surface { @apply border border-white/[0.08] bg-white/[0.025]; }
+  .badge { @apply rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs font-medium text-zinc-400; }
+  .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-zinc-100 px-4 py-2.5 text-sm font-semibold text-zinc-950 transition hover:bg-white; }
+  .button-secondary { @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm font-medium text-zinc-200 transition hover:border-white/20 hover:bg-white/[0.06]; }
+}
