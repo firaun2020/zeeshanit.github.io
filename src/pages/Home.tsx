@@ -17,7 +17,7 @@ export function Home() {
 
   return <>
     <section className="container-page pb-20 pt-24 text-center sm:pb-28 sm:pt-32">
-      <p className="eyebrow">Selected work</p>
+      <p className="eyebrow">Zeeshan Quraishy · Selected work</p>
       <h1 className="mx-auto mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-white sm:text-7xl">Engineering Portfolio</h1>
       <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">A collection of software products, AI applications and automation solutions built to solve real-world problems.</p>
     </section>
